@@ -121,5 +121,34 @@ title('Phase for x[n] - 0.5');
 xlabel('Frequency (Hz)');
 ylabel('Phase (rad)')
 
-sgtitle('4.d.iii.1')
+sgtitle('4.d.iii.2')
+hold off
+
+%% 1.d.iii.3
+N1 = 6;
+N = 256;
+n = 0:1:N1;
+x = ones(size(n));
+x = x .* cos(pi*n);
+freq = (0:N-1) * (2*pi)/N;
+
+x_out = fft(x,N);
+
+figure, hold on
+
+% Plot magnitude top
+subplot(2,1,1)
+stem(freq, abs(x_out), 'b');
+title('Magnitude for x[n] * cos(\pin)');
+xlabel('Frequency (Hz)');
+ylabel('Amplitude')
+
+% Plot phase bot
+subplot(2,1,2)
+stem(freq, angle(x_out),'r');
+title('Phase for x[n] * cos(\pin)');
+xlabel('Frequency (Hz)');
+ylabel('Phase (rad)')
+
+sgtitle('4.d.iii.3')
 hold off
