@@ -35,6 +35,12 @@ ylabel('Phase (rad)')
 end
 sgtitle('4.d.i')
 hold off
+
+% The output magnitude resembles periodic functions with a major increase
+% in amplitude towards the end of the frequency range. For the phase we
+% observe a consistent downward shift moving up in frequency. Notably, as
+% the N value is increased, the number of samples and percision of the DT
+% output is enlarged.
 %% 1.d.ii
 N1 = [2,6,10];
 N = 256;
@@ -66,6 +72,11 @@ end
 sgtitle('4.d.ii')
 hold off
 
+% The output magnitude resembles periodic functions with a major increase
+% in amplitude towards the end of the frequency range. For the phase we
+% observe a consistent downward shift moving up in frequency. All plots
+% show a similar density of points, however. WE recognise that with a
+% mighter N1 value,w e see more bumps and more total periods 
 %% 1.d.iii.1
 N1 = 6;
 N = 256;
@@ -95,6 +106,10 @@ ylabel('Phase (rad)')
 sgtitle('4.d.iii.1')
 hold off
 
+% The output magnitude resembles periodic functions with a major increase
+% in amplitude towards the end of the frequency range. For the phase we
+% observe a consistent downward shift moving up in frequency. Only 3 two
+% humps are observed.
 %% 1.d.iii.2
 N1 = 6;
 N = 256;
@@ -124,6 +139,9 @@ ylabel('Phase (rad)')
 sgtitle('4.d.iii.2')
 hold off
 
+% This graph resembles the same shape as before but has more 'humps', the
+% amplitude is at it smakimum at the endpoints and phase still is shown as
+% a downward trend as frequency decreases
 %% 1.d.iii.3
 N1 = 6;
 N = 256;
@@ -152,3 +170,8 @@ ylabel('Phase (rad)')
 
 sgtitle('4.d.iii.3')
 hold off
+
+% This output varies massively from the pervious outputs. Instead of the
+% highest magnitude being seen at the lowest and highest frequencies, the
+% peak is in the center. the magnitude represents a sinc function. The
+% phase matches this. This comes directly from the cos(pi * n).
